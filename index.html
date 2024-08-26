@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Restaurant Management</h1>
+
+        <div class="form-group">
+            <label for="tableSelect">Select Table:</label>
+            <select class="form-control" id="tableSelect">
+                <option value="1">Table 1</option>
+                <option value="2">Table 2</option>
+                <option value="3">Table 3</option>
+            </select>
+        </div>
+
+        <form id="orderForm">
+            <div class="form-group">
+                <input type="text" id="dish" class="form-control" placeholder="Dish Name" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="price" class="form-control" placeholder="Price" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Order</button>
+        </form>
+
+        <div class="mt-4">
+            <h2>Orders</h2>
+            <!-- Container for table-wise orders -->
+            <div id="tableOrders">
+                <h3>Table 1 Orders</h3>
+                <ul id="table1Orders" class="list-group"></ul>
+
+                <h3>Table 2 Orders</h3>
+                <ul id="table2Orders" class="list-group"></ul>
+
+                <h3>Table 3 Orders</h3>
+                <ul id="table3Orders" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
